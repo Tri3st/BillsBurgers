@@ -4,11 +4,12 @@ public class Hamburger {
   private double price;
   private String breadRollType;
   private int[] adds;
-  private static final Addition[] additions  = { Addition.newAddition("none",0.0),
+  private static final Addition[] additions  = {
+    Addition.newAddition("none",0.0),
     Addition.newAddition("lettuce", 0.27),
-     Addition.newAddition("tomato", 0.21),
-      Addition.newAddition("gurkin",0.17),
-      Addition.newAddition("egg",0.43), 
+    Addition.newAddition("tomato", 0.21),
+    Addition.newAddition("gurkin",0.17),
+    Addition.newAddition("egg",0.43),
     Addition.newAddition("onion", 0.26),
     Addition.newAddition("carrot", 0.22),
     Addition.newAddition("baked egg", 0.56),
@@ -57,13 +58,15 @@ public class Hamburger {
     }
   }
     
+  @Override
   public String toString(){
       String tmp = "";
-      tmp += this.name + " : \n";
+      tmp += "== " + this.name + " ==  \n";
       tmp += this.meat + " on a ";
       tmp += this.breadRollType + " roll.\n";
+      tmp += "-----------------------------------------\n";
       for (int i=0; i<adds.length;i++){
-          tmp+= additions[adds[i]]+"\n";
+          tmp+= additions[adds[i]];
       }
       return tmp;
     }
