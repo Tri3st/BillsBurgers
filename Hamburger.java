@@ -4,7 +4,7 @@ public class Hamburger {
   private double price;
   private String breadRollType;
   private int[] adds;
-  private static final Addition[] additions  = {
+  protected static final Addition[] additions  = {
     Addition.newAddition("none",0.0),
     Addition.newAddition("lettuce", 0.27),
     Addition.newAddition("tomato", 0.21),
