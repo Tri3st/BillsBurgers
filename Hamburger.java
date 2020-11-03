@@ -43,6 +43,15 @@ public class Hamburger {
   public String getBreadRollType(){
     return this.breadRollType;
   }
+
+  public double getTotalPrice(){
+      double tmp = 0.0;
+      tmp += this.price;
+      for (int i = 0; i < 4; i++){
+        tmp += this.adds[i].getPrice();
+      }
+      return tmp;
+    }
   
   public void addAddition(int index){
     int cnt = 0;
